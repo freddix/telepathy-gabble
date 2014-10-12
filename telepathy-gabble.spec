@@ -1,11 +1,11 @@
 Summary:	Gabble is a Jabber connection manager
 Name:		telepathy-gabble
-Version:	0.18.2
+Version:	0.18.3
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://telepathy.freedesktop.org/releases/telepathy-gabble/%{name}-%{version}.tar.gz
-# Source0-md5:	97b15831dd19de9b69ab10b5a9892f62
+# Source0-md5:	40f2fbabc4e6e147258c83ed697f2fcf
 BuildRequires:	dbus-glib-devel
 BuildRequires:	libnice-devel
 BuildRequires:	libxslt-progs
@@ -30,7 +30,6 @@ Gabble is a Jabber connection manager.
 %build
 %configure \
 	--disable-static	\
-	--with-ca-certificates=%{_sysconfdir}/certs/ca-certificates.crt	\
 	--with-tls=openssl
 %{__make}
 
